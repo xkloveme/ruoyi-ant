@@ -9,6 +9,8 @@ const plugins = []
 // )
 if (['production', 'prod'].includes(process.env.NODE_ENV)) {
   plugins.push('transform-remove-console')
+} else {
+  plugins.push('dynamic-import-node')
 }
 
 module.exports = {
@@ -17,8 +19,8 @@ module.exports = {
     [
       '@babel/preset-env',
       {
-        'useBuiltIns': 'entry',
-        'corejs': 3
+        useBuiltIns: 'entry',
+        corejs: 3
       }
     ]
   ],
