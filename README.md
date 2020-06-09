@@ -117,7 +117,7 @@ this.$formatDate(new Date(),'YYYY-MM-DD')
 
 ```
 
-### 「table」 封装,采用 jsx 书写方式
+### 4. 「table」 封装,采用 jsx 书写方式
 
 - 支持两种书写方式(直接传输数据和表头)
 
@@ -206,7 +206,7 @@ columns: [
 
 3. `mixins` 方式混入,同样可读性好,但此语法未来可能会废弃[不推荐]
 
-### 引入可配置`from`
+### 5. 引入可配置`from`
 
 - 基于配置表单,封装`wt-from`
 - 地址[http://form-create.com/v2/ant-design-vue/](http://form-create.com/v2/ant-design-vue/)
@@ -252,7 +252,7 @@ rule1: [
 
 - 基于第三方组件的使用,通过`type:'codemirror'`,来使用
 
-### 封装`search`组件
+### 6. 封装`search`组件
 
 >  对于表格常用的搜索进行封装,更少的代码,更多的灵活性
 
