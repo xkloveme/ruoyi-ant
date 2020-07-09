@@ -52,6 +52,13 @@
         <global-footer />
       </a-layout-footer>
 
+      <!-- Ads begin
+      广告代码 真实项目中请移除
+      production remove this Ads
+    -->
+      <!-- <ads v-if="isProPreviewSite&&!collapsed"/> -->
+      <ads v-if="!collapsed"/>
+      <!-- Ads end -->
       <!-- Setting Drawer (show in development mode) -->
       <setting-drawer v-if="!production"></setting-drawer>
     </a-layout>
@@ -69,6 +76,10 @@ import RouteView from './RouteView'
 import SideMenu from '@/components/Menu/SideMenu'
 import GlobalHeader from '@/components/GlobalHeader'
 import GlobalFooter from '@/components/GlobalFooter'
+<<<<<<< HEAD
+=======
+import Ads from '@/components/Other/CarbonAds'
+>>>>>>> 7efccc5b16f188db3c218dbf2c8aa947cf9965d7
 import SettingDrawer from '@/components/SettingDrawer'
 import { updateTheme } from '@/components/SettingDrawer/settingConfig'
 import { convertRoutes } from '@/utils/routeConvert'
@@ -81,10 +92,18 @@ export default {
     SideMenu,
     GlobalHeader,
     GlobalFooter,
+<<<<<<< HEAD
+=======
+    Ads,
+>>>>>>> 7efccc5b16f188db3c218dbf2c8aa947cf9965d7
     SettingDrawer
   },
   data () {
     return {
+<<<<<<< HEAD
+=======
+      isProPreviewSite: process.env.VUE_APP_PREVIEW === 'true' && process.env.NODE_ENV !== 'development',
+>>>>>>> 7efccc5b16f188db3c218dbf2c8aa947cf9965d7
       production: config.production,
       collapsed: false,
       menus: []
