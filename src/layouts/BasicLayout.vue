@@ -17,7 +17,7 @@
       production remove this Ads
     -->
     <!-- <ads v-if="isProPreviewSite&&!collapsed"/> -->
-    <ads v-if="!collapsed"/>
+    <!-- <ads v-if="!collapsed"/> -->
     <!-- Ads end -->
 
     <setting-drawer :settings="settings" @change="handleSettingChange" />
