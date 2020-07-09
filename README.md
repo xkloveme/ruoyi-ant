@@ -3,7 +3,15 @@
 文档：http://doc.rycloud.zmrit.com
 
 - 预览: http://ruoyi.ant.zmrit.com
+<<<<<<< HEAD
 - v3 测试版: http://v3.ant.zmrit.com
+=======
+- v3测试版: http://v3.ant.zmrit.com
+- v3分支为测试使用，需要稳定使用请选择master分支
+- 独有的字典用法
+- 独有的自定义默认排序
+- 监控类外链不宜对外暴露，可以设置白名单，故不在演示系统展示，可以参看 [ruoyi-ant redi监控](http://redis.ant.zmrit.com/)
+>>>>>>> 84a7f6b6ca20bb05f41e1444eaf7d135c0e35d24
 
 ## 下载和运行
 
@@ -19,7 +27,11 @@ yarn install
 yarn run serve
 ```
 
+<<<<<<< HEAD
 - 编译项目
+=======
+运行项目需要启动后端ruoyi-cloud，[传送门](https://gitee.com/zhangmrit/ruoyi-cloud)
+>>>>>>> 84a7f6b6ca20bb05f41e1444eaf7d135c0e35d24
 
 ```
 yarn run build

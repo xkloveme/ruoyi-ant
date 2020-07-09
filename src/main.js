@@ -17,19 +17,25 @@ import './permission' // permission control
 import './utils/filter' // global filter
 import 'ant-design-vue/dist/antd.less'
 import i18n from './locales'
-import './components/global.less'
+import ProLayout, { PageHeaderWrapper } from '@ant-design-vue/pro-layout'
+import themePluginConfig from '../config/themePluginConfig'
 import { Dialog } from '@/components'
 import WtUI from './packages'
 import formCreate, { maker } from '@form-create/ant-design-vue'
+import './global.less'
 // auto load api
 Vue.prototype.$api = api
 Vue.prototype.$maker = maker
+
 Vue.config.productionTip = false
 // mount axios Vue.$http and this.$http
 Vue.use(VueAxios)
 Vue.use(Dialog)
 Vue.use(WtUI)
 Vue.use(formCreate)
+Vue.component('pro-layout', ProLayout)
+Vue.component('page-header-wrapper', PageHeaderWrapper)
+window.umi_plugin_ant_themeVar = themePluginConfig.theme
 
 new Vue({
   router,
