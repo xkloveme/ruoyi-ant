@@ -197,7 +197,7 @@ export default {
     }),
     currentUser () {
       return {
-        name: '纪委',
+        name: '若依',
         avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png'
       }
     },

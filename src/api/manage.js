@@ -11,13 +11,14 @@ const api = {
 
 export default api
 
-export function getUserList (parameter) {
-  return request({
-    url: api.user,
-    method: 'get',
-    params: parameter
-  })
-}
+// export function getUserList (parameter) {
+//   return axios({
+//     url: api.user,
+//     method: 'get',
+//     params: parameter
+//   })
+// }
+export const getUserList = params => request.get(api.user, { params })
 
 export function getRoleList (parameter) {
   return request({

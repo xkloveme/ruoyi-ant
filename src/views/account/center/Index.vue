@@ -7,8 +7,7 @@
             <div class="avatar">
               <img :src="avatar">
             </div>
-            <!-- <div class="username">{{ nickname }}</div> -->
-            <div class="username">XXX</div>
+            <div class="username">{{ nickname }}</div>
             <div class="bio">海纳百川，有容乃大</div>
           </div>
           <div class="account-center-detail">

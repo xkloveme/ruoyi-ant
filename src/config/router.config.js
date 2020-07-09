@@ -259,6 +259,11 @@ export const constantRouterMap = [
     ]
   },
   {
+    path: '/job',
+    name: 'job',
+    component: () => import(/* webpackChunkName: "fail" */ '@/views/monitor/jobList')
+  },
+  {
     path: '/404',
     component: () => import(/* webpackChunkName: "fail" */ '@/views/exception/404')
   }

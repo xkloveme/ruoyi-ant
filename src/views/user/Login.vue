@@ -37,10 +37,10 @@
           <a-form-item>
             <a-input-password
               size="large"
-              placeholder="密码: admin123"
+              placeholder="密码: admin"
               v-decorator="[
                 'password',
-                { initialValue:'admin123',rules: [{ required: true, message: '请输入密码' }], validateTrigger: 'blur'}
+                { initialValue:'admin',rules: [{ required: true, message: '请输入密码' }], validateTrigger: 'blur'}
               ]"
             >
               <a-icon slot="prefix" type="lock" :style="{ color: 'rgba(0,0,0,.25)' }" />
@@ -105,7 +105,7 @@
         >确定</a-button>
       </a-form-item>
 
-      <div class="user-login-other">
+      <!-- <div class="user-login-other">
         <span>其他登录方式</span>
         <a>
           <a-icon class="item-icon" type="alipay-circle"></a-icon>
@@ -117,7 +117,7 @@
           <a-icon class="item-icon" type="weibo-circle"></a-icon>
         </a>
         <router-link class="register" :to="{ name: 'register' }">注册账户</router-link>
-      </div>
+      </div> -->
     </a-form>
 
     <two-step-captcha
