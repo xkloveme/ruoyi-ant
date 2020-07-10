@@ -19,7 +19,7 @@
       <a-col :lg="{span: 6, offset: 1}" :md="12" :sm="24">
         <a-form-item>
           <span slot="label">生成包路径
-            <a-tooltip title="生成在哪个java包下，例如 com.ruoyi.system">
+            <a-tooltip title="生成在哪个java包">
               <a-icon type="question-circle-o" />
             </a-tooltip>
           </span>

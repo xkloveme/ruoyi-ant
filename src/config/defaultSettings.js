@@ -23,7 +23,7 @@ export default {
   menu: {
     locale: true
   },
-  title: 'RuoYi Ant',
+  title: '临安区纪委',
   pwa: false,
   iconfontUrl: '',
   production: process.env.NODE_ENV === 'production' && process.env.VUE_APP_PREVIEW !== 'true'

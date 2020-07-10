@@ -5,17 +5,18 @@
         <div class="header">
           <a href="/">
             <img src="~@/assets/logo.svg" class="logo" alt="logo">
-            <span class="title">RUOYI ANT</span>
+            <span class="title">临安区纪委纪检监察信息化平台</span>
           </a>
         </div>
-        <div class="desc">
+        <!-- <div class="desc">
           Ant Design 是西湖区最具影响力的 Web 设计规范
-        </div>
+        </div> -->
       </div>
 
       <router-view />
 
       <div class="footer">
+        <<<<<<< HEAD
         <div class="links">
           <a href="_self">帮助</a>
           <a href="_self">隐私</a>
@@ -23,11 +24,20 @@
         </div>
         <div class="copyright">
           Copyright &copy; 2019 ruoyi
+          =======
+          <!-- <div class="links">
+          <a href="_self">帮助</a>
+          <a href="_self">隐私</a>
+          <a href="_self">条款</a>
+        </div> -->
+          <div class="copyright">
+            Copyright &copy; 2020 华通云数据科技有限公司
+            >>>>>>> 0dc9a3e5b79f48632fef3a8523a44b17419b2b41
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</template>
+  </div></template>
 
 <script>
 import { deviceMixin } from '@/store/device-mixin'

@@ -112,9 +112,12 @@ export default {
       this.$api.getManageGetUserApi().then(res => {
         this.list = res.rows
       })
+<<<<<<< HEAD
     },
     handleClick (row) {
       console.log('🐛:: handleClick -> e', row)
+=======
+>>>>>>> 0dc9a3e5b79f48632fef3a8523a44b17419b2b41
     }
   }
 }

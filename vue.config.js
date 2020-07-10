@@ -100,8 +100,8 @@ const vueConfig = {
     port: 8000,
     proxy: {
       '/api': {
-        target: 'http://ruoyi.ant.zmrit.com/api', // 框架演示地址
-        // target: 'http://192.168.232.88:9527', // 后端地址
+        // target: 'http://ruoyi.ant.zmrit.com/api', // 框架演示地址
+        target: 'http://192.168.232.88:9527', // 后端地址
         pathRewrite: { '^/api': '' },
         ws: false,
         changeOrigin: true
@@ -111,7 +111,7 @@ const vueConfig = {
 
   // disable source map in production
   productionSourceMap: false,
-  lintOnSave: undefined,
+  lintOnSave: false,
   // babel-loader no-ignore node_modules/*
   transpileDependencies: []
 }

@@ -1,44 +1,17 @@
-<h1 align="center">Ant 若依前端框架</h1>
-
-文档：http://doc.rycloud.zmrit.com
-
-- 预览: http://ruoyi.ant.zmrit.com
-<<<<<<< HEAD
-- v3 测试版: http://v3.ant.zmrit.com
-=======
-- v3测试版: http://v3.ant.zmrit.com
-- v3分支为测试使用，需要稳定使用请选择master分支
-- 独有的字典用法
-- 独有的自定义默认排序
-- 监控类外链不宜对外暴露，可以设置白名单，故不在演示系统展示，可以参看 [ruoyi-ant redi监控](http://redis.ant.zmrit.com/)
->>>>>>> 84a7f6b6ca20bb05f41e1444eaf7d135c0e35d24
-
-## 下载和运行
-
+<h1 align="center">临安区纪委纪检监察信息化平台</h1>
 - 安装依赖
-
 ```
 yarn install
 ```
-
 - 开发模式运行
-
 ```
 yarn run serve
 ```
-
-<<<<<<< HEAD
 - 编译项目
-=======
-运行项目需要启动后端ruoyi-cloud，[传送门](https://gitee.com/zhangmrit/ruoyi-cloud)
->>>>>>> 84a7f6b6ca20bb05f41e1444eaf7d135c0e35d24
-
 ```
 yarn run build
 ```
-
 - Lints and fixes files
-
 ```
 yarn run lint
 ```
@@ -169,7 +142,7 @@ import columns from './table.js'
 columns: columns(this)
 ```
 
-> 表格渲染支持两种写法
+> 表格渲染支持三种写法
 
 ```js
  {
@@ -215,8 +188,20 @@ columns: [
   }
 ]
 ```
+3. 直接写标签,`babel`插件会把标签转换为`jsx`形式
+```
+ {
+    dataIndex: 'userName',
+    key: 'userName',
+    title: '名称',
+    customRender: (text, row, index) => {
+      const str = text
+      return <a onClick={() => this.handleClick(row)}>{str}</a>
+    }
+  }
+```
 
-3. `mixins` 方式混入,同样可读性好,但此语法未来可能会废弃[不推荐]
+4. `mixins` 方式混入,同样可读性好,但此语法未来可能会废弃[不推荐]
 
 ### 5. 引入可配置`from`
 
