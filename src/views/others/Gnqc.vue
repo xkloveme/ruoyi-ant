@@ -7,7 +7,10 @@
     <div v-auth="'system:dict:add'">权限</div>
     <div v-auth="'system:dict:ad22'">无权限</div>
     <div v-if="$pm('system:dict:add')">v-if</div>
-    <wt-table :columns="columns" :api="$api.getManageGetUserApi"></wt-table>
+    <wt-table :columns="columns" :api="$api.getManageGetUserApi">
+      <span slot="userName" slot-scope="text">{{ text }}</span>
+      <span slot="remark" slot-scope="text">{{ text }}11</span>
+    </wt-table>
   </div>
 </template>
 
@@ -27,12 +30,18 @@ export default {
           }
         },
         {
-          title: '用户名',
-          dataIndex: 'userName'
+          dataIndex: 'userName',
+          key: 'userName',
+          title: '名称',
+          customRender: (text, row, index) => {
+            const str = text
+            return <a onClick={() => this.handleClick(row)}>{str}</a>
+          }
         },
         {
           title: '备注',
-          dataIndex: 'remark'
+          dataIndex: 'remark',
+          scopedSlots: { customRender: 'remark' }
         },
         {
           title: '创建时间',
@@ -103,6 +112,9 @@ export default {
       this.$api.getManageGetUserApi().then(res => {
         this.list = res.rows
       })
+    },
+    handleClick (row) {
+      console.log('🐛:: handleClick -> e', row)
     }
   }
 }
